@@ -1,0 +1,10 @@
+<h1>Product</h1>
+
+<%= link_to "Back to Products", products_url %> | <%= link_to "Edit Product", edit_product_path(@product) %> | <%= link_to "Delete", @product, :confirm => "Are you sure you want to delete this product?", :method => :delete %>
+
+<p>Name: <%= @product[:name] %><br />
+</p> 
+<p>Description: <%= @product[:description] %><br />
+</p> 
+<p>Price in cents: <%= @product[:price_in_cents] %>
+</p>
