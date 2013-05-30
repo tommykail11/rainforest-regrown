@@ -3,7 +3,7 @@
 <%= link_to "New Product", "/products/new" %>
 
 <% @products.each do |product| %>
-  <p>Name: <%= product[:name] %><br />
+  <p>Name: <%= link_to product[:name], product_path(product) %><br />
   </p> 
   <p>Description: <%= product[:description] %><br />
   </p> 
