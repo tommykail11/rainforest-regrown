@@ -1,6 +1,7 @@
 RainforestRegrown::Application.routes.draw do
   resources :products
-  resources :users, :only => [:new, :create]
+  resources :users,    :only => [:new, :create]
+  resources :sessions, :only => [:new, :create, :destroy]
 end
 
   # The priority is based upon order of creation:
