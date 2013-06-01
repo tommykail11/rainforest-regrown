@@ -1,6 +1,6 @@
 RainforestRegrown::Application.routes.draw do
   resources :products do
-    resources :reviews, :except => [:index]
+    resources :reviews
   end
   resources :users,    :only => [:new, :create]
   resources :sessions, :only => [:new, :create, :destroy]
