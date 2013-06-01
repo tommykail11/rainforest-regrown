@@ -3,7 +3,7 @@ class ReviewsController < ApplicationController
   before_filter :ensure_logged_in, :only => [:edit, :create, :show, :update, :destroy]
 
   def index
-
+    @reviews = @product.reviews.order('created_at DESC')
   end
 
   def new
