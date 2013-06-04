@@ -9,7 +9,7 @@ class ProductTest < ActiveSupport::TestCase
     # @p is defined in the setup do block
     # assigning the name of @p to be blank
     @p.name = ""
-    # because in model/product.rb, presence of name must be is true
+    # because in models/product.rb, presence of name must be is true
     # so it is not going to pass validations
     refute @p.valid? 
     # refute and assert are the opposite
@@ -31,4 +31,9 @@ class ProductTest < ActiveSupport::TestCase
     @p.price = 5
     assert @p.valid?
   end
+
+  test "formatted price"
+    @p.price = 20.00
+    assert @p.valid?
+  end  
 end
