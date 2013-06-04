@@ -17,22 +17,22 @@ class ProductTest < ActiveSupport::TestCase
     # refute false means the test passes
   end
 
-  test "must have a description"
+  test "must have a description" do
     @p.description = ""
     refute @p.valid?
   end
 
-  test "must have a price"
+  test "must have a price" do
     @p.price = ""
     refute @p.valid?
   end
 
-  test "price must be an integer"
+  test "price must be an integer" do
     @p.price = 5
     assert @p.valid?
   end
 
-  test "formatted price"
+  test "formatted price" do
     @p.price = 20.00
     assert @p.valid?
   end  
